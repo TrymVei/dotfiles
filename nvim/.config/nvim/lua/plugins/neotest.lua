@@ -6,6 +6,7 @@ return {
     "antoinemadec/FixCursorHold.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-neotest/neotest-jest",
+    "nvim-neotest/neotest-python",
   },
   config = function() require "configs.neotest" end,
   keys = require "mapping.neotest",
