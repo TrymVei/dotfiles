@@ -1,0 +1,9 @@
+[metadata]
+name = "layout"
+description = "Browse layout files"
+
+[source]
+command = "fd --type f '^layout\\.'"
+
+[preview]
+command = "bat --style=plain --color=always {}"

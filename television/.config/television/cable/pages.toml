@@ -1,0 +1,9 @@
+[metadata]
+name = "page"
+description = "Browse page files"
+
+[source]
+command = "fd --type f '^page\\.'"
+
+[preview]
+command = "bat --style=plain --color=always {}"
