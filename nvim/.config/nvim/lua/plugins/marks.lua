@@ -4,5 +4,5 @@ return {
   opts = {
     default_mappings = false,
   },
-  keys = require "mappings.marks",
+  keys = require "mapping.marks",
 }
