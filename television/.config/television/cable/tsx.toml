@@ -6,7 +6,8 @@ description = "Browse tsx files"
 command = "fd --type f --extension tsx"
 
 [preview]
-command = "bat --style=plain --color=always {}"
+command = "bat -n --color=always '{}'"
+env = { BAT_THEME = "tokyonight_night" }
 
 [keybindings]
 ctrl-e = "actions:open"

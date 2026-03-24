@@ -6,4 +6,5 @@ description = "Browse route files"
 command = "fd --type f '^route\\.'"
 
 [preview]
-command = "bat --style=plain --color=always {}"
+command = "bat -n --color=always '{}'"
+env = { BAT_THEME = "tokyonight_night" }

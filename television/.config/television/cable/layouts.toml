@@ -6,4 +6,5 @@ description = "Browse layout files"
 command = "fd --type f '^layout\\.'"
 
 [preview]
-command = "bat --style=plain --color=always {}"
+command = "bat -n --color=always '{}'"
+env = { BAT_THEME = "tokyonight_night" }
