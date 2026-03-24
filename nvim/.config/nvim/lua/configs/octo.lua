@@ -1,7 +1,7 @@
 require("octo").setup {
   enable_builtin = true,
   default_remote = { "upstream", "origin" },
-  picker = "snacks",
+  picker = "default",
   picker_config = {
     use_emojis = true,
   },
@@ -13,7 +13,5 @@ require("octo").setup {
 -- Clean up fold display in Octo diff buffers
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "octo://*",
-  callback = function()
-    vim.opt_local.foldtext = ""
-  end,
+  callback = function() vim.opt_local.foldtext = "" end,
 })
