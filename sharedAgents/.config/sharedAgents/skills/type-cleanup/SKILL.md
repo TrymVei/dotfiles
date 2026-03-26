@@ -61,6 +61,24 @@ interface BillingUser extends Pick<User, "id" | "email" | "displayName"> {
 
 **Test**: if changing a field type on the source interface should also change it on the derived type, they must be linked — not copy-pasted.
 
+#### Prefer `Pick` over indexed access types
+
+When extracting a field's type, use `Pick` so the relationship to the source interface is explicit and the field name is checked at compile time. Indexed access (`Interface["field"]`) hides the structural relationship and is harder to trace.
+
+```typescript
+// ❌ Indexed access — relationship to source interface is hidden
+interface CheckoutForm {
+  plan: NonNullable<UserSubscription["plan"]>;
+}
+
+// ✅ Pick — compiler verifies the field exists and relationship is explicit
+interface CheckoutForm extends Pick<UserSubscription, "plan"> {
+  // If UserSubscription["plan"] becomes non-nullable, this stays in sync automatically
+}
+```
+
+If the source field is nullable but the derived context requires a non-null value, prefer narrowing at the call site rather than `NonNullable` in the type definition — the nullability exists on the source for a reason.
+
 ### 3. Extract named interfaces for nested objects
 
 Inline object types inside interfaces cannot be reused or referenced independently. Extract them.
@@ -140,3 +158,4 @@ If an existing interface already defines the fields you need, derive from it ins
 | Rating store-write typing as low priority | It's highest priority — runtime stores have zero type checking |
 | Extracting nested types but not linking them back | Extracted type must be used in the parent via `extends` or composition |
 | Leaving object literals untyped when a matching interface exists | Grep for field names — if 2+ fields match an interface, type it |
+| Using `NonNullable<Interface["field"]>` to extract a field type | Use `extends Pick<Interface, "field">` — keeps the structural link explicit |
