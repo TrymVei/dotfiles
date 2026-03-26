@@ -1,0 +1,10 @@
+[metadata]
+name = "types"
+description = "Browse files under types/"
+
+[source]
+command = "fd --type f --full-path '(^|/)types/'"
+
+[preview]
+command = "bat -n --color=always '{}'"
+env = { BAT_THEME = "tokyonight_night" }
