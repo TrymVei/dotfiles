@@ -36,6 +36,21 @@ Personal dotfiles for zsh, starship, tmux, ghostty, Claude Code, and Codex.
 
 ## Quick Setup on a New Machine
 
+### Recommended Structure
+
+Keep the repo portable and split config into these buckets:
+
+- **Base config in repo**: shared defaults that should work on every machine
+- **Local overrides outside stow**: machine-specific paths, work-only tools, and temporary integrations
+- **App-local state outside repo**: trust settings, logs, caches, plugin installs, and other generated files
+
+Examples from this repo:
+
+- `zsh/.zshrc` should stay portable and now loads `~/.zshrc.local` if it exists
+- `~/.zshrc.local` should contain things like Rancher Desktop paths, Google Cloud SDK setup, or other machine-only PATH changes
+- `codex/.config/codex/config.toml` should ideally only contain shared defaults; project trust entries with absolute paths are better kept local
+- `sharedAgents/.config/sharedAgents/AGENTS.md` should use home-relative paths in examples and instructions
+
 ### Prerequisites
 
 #### macOS
@@ -88,6 +103,8 @@ git clone https://github.com/TrymVei/dotfiles.git ~/dotfiles && cd ~/dotfiles &&
 
 That's it! Your shell will be configured on the next reload.
 
+If you need machine-specific shell setup, create `~/.zshrc.local` from `zsh/.zshrc.local.example`.
+
 ### Verify Setup
 ```bash
 echo $ZSH_THEME  # Should be empty (using Starship)
@@ -109,7 +126,8 @@ Changes in `~/dotfiles` will automatically reflect thanks to symlinks.
 ## Notes
 
 - The configuration uses Starship as the primary prompt (theme in `.zshrc` is empty)
-- Some paths are machine-specific and may need adjustment
+- Put machine-specific shell paths in `~/.zshrc.local`, not in `zsh/.zshrc`
 - NVM is referenced directly in `.zshrc`
+- Codex project trust entries are machine-specific and should not be treated as portable defaults
 - Optional CLI tools in the macOS setup section are included for the broader workflow, not as hard requirements
 - I also use Superpowered, BetterDisplay, Obsidian, Raycast, and Arc on macOS
