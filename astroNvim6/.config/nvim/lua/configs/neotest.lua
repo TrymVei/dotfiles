@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: missing-fields
 require("neotest").setup {
   adapters = {
     require "neotest-python" {
@@ -6,7 +7,6 @@ require("neotest").setup {
     },
     require "neotest-jest" {
       jestCommand = "npm test --",
-      jestArguments = function(defaultArguments, context) return defaultArguments end,
       jestConfigFile = "jest.config.js",
       env = { CI = true },
       cwd = function(path)
