@@ -66,12 +66,12 @@ brew install fzf fd ripgrep zoxide gh jq yq
 brew install pnpm yarn deno podman
 brew install --cask claude-code codex
 
+# Bun
+brew install oven-sh/bun/bun
+
 # GUI apps I also use on macOS
 brew install --cask betterdisplay obsidian raycast arc
 # Install Superpowered separately if needed
-
-# Bun
-brew install oven-sh/bun/bun
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
