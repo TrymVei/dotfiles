@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "packages": {
+    "pi-nvim": {
+      "name": "pi-nvim",
+      "size": 10054,
+      "timestamp": 1777530795194
+    },
+    "pi-show-diffs": {
+      "name": "pi-show-diffs",
+      "size": 118108,
+      "timestamp": 1777530795201
+    },
+    "@ifi/oh-pi-themes": {
+      "name": "@ifi/oh-pi-themes",
+      "size": 13021,
+      "timestamp": 1777530795208
+    },
+    "@zackify/pi-claude-permissions": {
+      "name": "@zackify/pi-claude-permissions",
+      "size": 104752,
+      "timestamp": 1777530795211
+    },
+    "@ollama/pi-web-search": {
+      "name": "@ollama/pi-web-search",
+      "size": 7190,
+      "timestamp": 1777530795216
+    },
+    "pi-extension-manager": {
+      "name": "pi-extension-manager",
+      "size": 250407,
+      "timestamp": 1777530795552
+    },
+    "@juicesharp/rpiv-ask-user-question": {
+      "name": "@juicesharp/rpiv-ask-user-question",
+      "size": 143073,
+      "timestamp": 1777530795570
+    }
+  }
+}

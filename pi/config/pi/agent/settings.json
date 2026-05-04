@@ -1,0 +1,18 @@
+{
+  "lastChangelogVersion": "0.70.6",
+  "theme": "tokyo-night-bright",
+  "defaultProvider": "amazon-bedrock",
+  "defaultModel": "eu.anthropic.claude-sonnet-4-6",
+  "packages": [
+    "npm:@ifi/oh-pi-themes",
+    "npm:@ollama/pi-web-search",
+    "npm:pi-nvim",
+    "npm:pi-show-diffs",
+    "npm:@zackify/pi-claude-permissions",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-extension-manager"
+  ],
+  "powerline": "compact",
+  "defaultThinkingLevel": "minimal",
+  "hideThinkingBlock": false
+}
