@@ -72,6 +72,8 @@ brew install oven-sh/bun/bun
 # GUI apps I also use on macOS
 brew install --cask betterdisplay obsidian raycast arc
 # Install Superpowered separately if needed
+# Slack
+brew install --cask slack
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
