@@ -73,6 +73,9 @@ brew install oven-sh/bun/bun
 brew install --cask betterdisplay obsidian raycast arc figma
 # Install Superpowered separately if needed
 
+# Mos (smooth scroll with reverse scroll direction
+brew install --cask mos
+
 # Slack
 brew install --cask slack
 
