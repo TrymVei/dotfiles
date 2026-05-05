@@ -60,7 +60,7 @@ brew install stow starship nvm lazygit yazi tmux neovim
 brew install --cask ghostty font-fantasque-sans-mono-nerd-font
 
 # CLI tools: recommended
-brew install fzf fd ripgrep zoxide gh jq yq
+brew install fzf fd ripgrep zoxide gh jq yq television
 
 # CLI tools: optional
 brew install pnpm yarn deno podman
