@@ -70,7 +70,7 @@ brew install --cask claude-code codex
 brew install oven-sh/bun/bun
 
 # GUI apps I also use on macOS
-brew install --cask betterdisplay obsidian raycast arc
+brew install --cask betterdisplay obsidian raycast arc figma
 # Install Superpowered separately if needed
 
 # Slack
