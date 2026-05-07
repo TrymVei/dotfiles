@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -29,9 +27,16 @@ return {
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
+        -- prettier (none-ls) will handle formatting for these
+        "tsserver",
+        "typescript-language-server",
+        "vtsls",
+        "astro",
+        "cssls",
+        "html",
       },
+      -- Route ALL formatting through none-ls (prettier) — LSP servers are fallback only
+      filter = function(client) return client.name == "null-ls" end,
       timeout_ms = 1000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
